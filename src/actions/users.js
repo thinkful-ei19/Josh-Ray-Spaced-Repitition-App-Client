@@ -28,17 +28,18 @@ import {normalizeResponseErrors} from './utils';
 // };
 
 
-export const registerUser = (username, password) => dispatch => {
+export const registerUser = (username) => dispatch => {
+    console.log(username);
+    const newUser = username;
     return fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          username,
-          password
-        })
+        body: JSON.stringify(
+          newUser
+        )
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
