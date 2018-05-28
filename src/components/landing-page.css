@@ -1,21 +1,19 @@
-body{
-    background-image: url('https://s15.postimg.cc/7iernixsr/Dothraki_Landing_Page.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .home{
     display: block;
     margin: auto;
-    width: 25%;
+    width: 20%;
     text-align: center;
-    margin-top: 260px;
+    border: 1px solid #000000;
+    background: white;
+    border-radius: 15px;
+    margin-top: 40px;
 }
 
-.register{
-    color: white;
+a{
+    color: black;
     display: block;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .app-name{
