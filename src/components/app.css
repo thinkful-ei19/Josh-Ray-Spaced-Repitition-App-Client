@@ -1,5 +1,17 @@
+html{
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 body{
     background-image: url('https://s15.postimg.cc/7iernixsr/Dothraki_Landing_Page.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.app{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
 }

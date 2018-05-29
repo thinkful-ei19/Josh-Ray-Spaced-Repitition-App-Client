@@ -1,0 +1,19 @@
+.dashboard-username{
+    display: block;
+    position: absolute;
+    width: 20%;
+    background: beige;
+    border: 1px solid tan;
+    height: 20px;
+    right: 10px;
+    padding: 10px;
+    text-align: center;
+    top: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px;
+}
+
+.dashboard{
+    width: 100%;
+    display: flex;
+}

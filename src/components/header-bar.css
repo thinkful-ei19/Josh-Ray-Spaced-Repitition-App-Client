@@ -1,0 +1,27 @@
+.header-bar{
+    width: 20%;
+    border: 5px solid tan;
+    background: beige;
+    display: inline-block;
+    box-shadow: 5px 10px;
+    border-radius: 15px;
+    text-align: center;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.app-name{
+    display: inline-block;
+    width: 80%;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.logout{
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
