@@ -4,7 +4,7 @@ import {
 } from '../actions/questions';
 
 const initialState = {
-    data: '',
+    data: null,
     error: null
 };
 

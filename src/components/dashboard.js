@@ -18,7 +18,7 @@ export class Dashboard extends React.Component {
                 </div>
                 <form className="question">
                     <p>What is the English equivalent of the Dothraki word:
-                    {this.props.questions}?</p>
+                    {this.props.questions && this.props.questions[0].question}?</p>
                     <input type="text" placeholder="Answer" />
                     <br />
                     <button type="submit" className="submit">Submit</button>
@@ -30,11 +30,10 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
     const { currentUser } = state.auth;
-    console.log(state.auth.currentUser.questions);
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        questions: state.auth.currentUser.questions
+        questions: state.questions.data
     };
 };
 

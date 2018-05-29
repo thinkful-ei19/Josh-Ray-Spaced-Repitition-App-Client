@@ -22,9 +22,9 @@ export const fetchQuestions = () => (dispatch, getState) => {
             Authorization: `Bearer ${authToken}`
         }
     })
-        .then(res => normalizeResponseErrors(res))
+        //.then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(({data}) => dispatch(fetchQuestionsSuccess(data)))
+        .then((data) => dispatch(fetchQuestionsSuccess(data)))
         .catch(err => {
             dispatch(fetchQuestionsError(err));
         });
