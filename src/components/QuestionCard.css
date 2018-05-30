@@ -19,3 +19,12 @@
     width: 25%;
     box-shadow: 2px 5px;
 }
+
+.next{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 25%;
+    box-shadow: 2px 5px;
+}
