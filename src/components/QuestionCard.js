@@ -20,7 +20,7 @@ export class QuestionCard extends React.Component {
         return (
             <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}>
                 <p className="dothraki">
-                    {this.props.questions && this.props.questions.length > 0? this.props.questions[0].question : ''}</p>
+                    Question: {this.props.questions ? this.props.questions.question : ''}</p>
                 <Field component="input" type="text" name="answer" placeholder="Answer" />
                 <br />
                 <p className="feedback">{this.props.feedback}</p>
