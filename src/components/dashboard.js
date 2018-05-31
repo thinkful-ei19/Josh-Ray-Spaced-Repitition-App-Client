@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import QuestionCard from './QuestionCard';
-import './dashboard.css';
 
 export class Dashboard extends React.Component {
     
