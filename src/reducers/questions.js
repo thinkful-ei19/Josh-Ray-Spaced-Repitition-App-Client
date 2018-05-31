@@ -2,13 +2,17 @@ import {
     FETCH_QUESTIONS_SUCCESS,
     FETCH_QUESTIONS_ERROR,
     SUBMIT_ANSWER_FEEDBACK,
-    SUBMIT_ANSWER_ERROR
+    SUBMIT_ANSWER_ERROR, 
+    //test actions
+    CORRECT_ANSWER_SUCCESS,
+    INCORRECT_ANSWER_SUCCESS
 } from '../actions/questions';
 
 const initialState = {
     data: null,
     feedback: null,
-    error: null
+    error: null,
+    correct: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,6 +32,14 @@ export default function reducer(state = initialState, action) {
     } else if (action.type === SUBMIT_ANSWER_ERROR) {
         return Object.assign({}, state, {
             error: action.error
+        });
+    } else if(action.type === CORRECT_ANSWER_SUCCESS) {
+        return Object.assign({}, state, {
+            correct: true
+        });
+    } else if(action.type === INCORRECT_ANSWER_SUCCESS) {
+        return Object.assign({}, state, {
+            correct: false
         });
     }
     return state;

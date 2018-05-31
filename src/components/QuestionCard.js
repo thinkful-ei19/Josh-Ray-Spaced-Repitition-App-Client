@@ -10,23 +10,29 @@ export class QuestionCard extends React.Component {
         this.props.dispatch(fetchQuestions());
     }
 
-    onSubmit(value) {
-        return this.props.dispatch(submitAnswer(value));
+    onSubmit(event) {
+        event.preventDefault();
+        const answer = document.getElementById("SubmitAnswer").value;
+        // console.log(answer);
+        this.props.dispatch(submitAnswer(answer));
     }
 
     render() {
-        console.log(this.props.questions);
+        // console.log(this.props.questions);
 
         return (
-            <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}>
+            <div className="SubmitAnswer">
+            {/* <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}> */}
+            <form onSubmit={event => this.onSubmit(event)}>
                 <p className="dothraki">
                     Question: {this.props.questions ? this.props.questions.question : ''}</p>
-                <Field component="input" type="text" name="answer" placeholder="Answer" />
+                <Field component="input" type="text" name="answer" placeholder="Answer" id="SubmitAnswer" />
                 <br />
                 <p className="feedback">{this.props.feedback}</p>
                 <button className="submit">Submit</button>
                 <button className="next" onClick={() => this.props.dispatch(fetchQuestions())}>Next Question</button>
             </form>
+            </div>
         )
     };
 }
@@ -35,7 +41,8 @@ const mapStateToProps = state => {
     const { currentUser } = state.auth;
     return {
         questions: state.questions.data,
-        feedback: state.questions.feedback
+        feedback: state.questions.feedback,
+        correct: state.questions.correct
     }
 }
 

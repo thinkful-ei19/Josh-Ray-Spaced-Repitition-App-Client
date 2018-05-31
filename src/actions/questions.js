@@ -16,7 +16,7 @@ export const nextError = error => ({
 export const SUBMIT_ANSWER_FEEDBACK = 'SUBMIT_ANSWER_FEEDBACK';
 export const submitAnswerFeedback = data => ({
     type: SUBMIT_ANSWER_FEEDBACK,
-    data
+    data,
 });
 
 export const SUBMIT_ANSWER_ERROR = 'SUBMIT_ANSWER_ERROR';
@@ -37,6 +37,21 @@ export const fetchQuestionsError = error => ({
     error
 });
 
+// TEST ACTIONS ===============================================
+export const CORRECT_ANSWER_SUCCESS = 'CORRECT_ANSWER_SUCCESS';
+export const correctAnswerSuccess = correct => ({
+    type: CORRECT_ANSWER_SUCCESS,
+    correct
+});
+
+export const INCORRECT_ANSWER_SUCCESS = 'INCORRECT_ANSWER_SUCCESS';
+export const incorrectAnswerSuccess = correct => ({
+    type: INCORRECT_ANSWER_SUCCESS,
+    correct
+});
+
+// ==========================================================
+
 export const fetchQuestions = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/api/questions`, {
@@ -54,7 +69,8 @@ export const fetchQuestions = () => (dispatch, getState) => {
         });
 };
 
-export const submitAnswer = (name) => (dispatch, getState) => {
+export const submitAnswer = (value) => (dispatch, getState) => {
+    console.log(value);
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/api/questions`, {
         method: 'PUT',
@@ -62,14 +78,13 @@ export const submitAnswer = (name) => (dispatch, getState) => {
             'Authorization': `Bearer ${authToken}`,
             'Accept': 'application/json',
             'Content-Type': 'application/json'},
-            body: JSON.stringify({name}) 
+            body: JSON.stringify({value}) 
     })
-    .then(res => {
-        console.log(res);
-        return dispatch(submitAnswerFeedback(res));
-    })
-    .catch(err => {
-        dispatch(submitAnswerError(err))
-    });
+    .then(response => response.json())
+    .then(data => dispatch(correctAnswerSuccess(data)))
+    .catch(err => dispatch(incorrectAnswerSuccess(err)))
+        // console.log(res);
+        // return dispatch(submitAnswerFeedback(res));
+    
 };
 
