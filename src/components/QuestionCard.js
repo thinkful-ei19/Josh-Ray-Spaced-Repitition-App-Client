@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './QuestionCard.css';
 import requiresLogin from './requires-login';
 import { reduxForm, Field } from 'redux-form';
 import { fetchQuestions, submitAnswer } from '../actions/questions';
