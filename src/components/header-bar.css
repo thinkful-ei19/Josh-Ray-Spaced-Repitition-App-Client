@@ -2,7 +2,7 @@
     width: 20%;
     border: 5px solid tan;
     background: beige;
-    display: inline-block;
+    display: block;
     box-shadow: 5px 10px;
     border-radius: 15px;
     text-align: center;
