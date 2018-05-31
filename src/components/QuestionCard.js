@@ -36,7 +36,10 @@ export class QuestionCard extends React.Component {
                     </div>
                     <div className="buttons">
                         <button className="submit">Submit</button>
-                        <button className="next" onClick={() => this.props.dispatch(fetchQuestions())}>Next Question</button>
+                        <button className="next" onClick={(event) => {
+                            event.preventDefault();
+                            this.props.dispatch(fetchQuestions())
+                        }}>Next Question</button>
                     </div>
                 </form>
             </div>
