@@ -5,7 +5,7 @@ import {
     SUBMIT_ANSWER_ERROR, 
     INCREMENT_CORRECT,
     INCREMENT_INCORRECT,
-    //test actions
+    //test action
     CORRECT_ANSWER_SUCCESS,
     INCORRECT_ANSWER_SUCCESS
 } from '../actions/questions';
