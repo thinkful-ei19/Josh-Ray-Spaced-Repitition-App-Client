@@ -23,7 +23,7 @@ export class QuestionCard extends React.Component {
         return (
             <div className="SubmitAnswer">
                 {/* <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}> */}
-                <form onSubmit={event => this.onSubmit(event)} >
+                <form onSubmit={event => this.onSubmit(event)} className="question-form">
                     <p className="question-message">
                         What is the English equivalent of this Dothraki word?</p>
                     <p className="dothraki">
