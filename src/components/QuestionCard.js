@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './QuestionCard.css';
 import requiresLogin from './requires-login';
 import { reduxForm, Field } from 'redux-form';
-import {fetchQuestions, submitAnswer} from '../actions/questions';
+import { fetchQuestions, submitAnswer } from '../actions/questions';
 
 export class QuestionCard extends React.Component {
     componentDidMount() {
@@ -22,18 +22,24 @@ export class QuestionCard extends React.Component {
 
         return (
             <div className="SubmitAnswer">
-            {/* <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}> */}
-            <form onSubmit={event => this.onSubmit(event)} >
-                <p className="dothraki">
-                    What is the English equivalent of this Dothraki word?
-                    <br /> 
-                    {this.props.questions ? this.props.questions.question : ''}</p>
-                <Field component="input" type="text" name="answer" placeholder="Answer" id="SubmitAnswer" />
-                <br />
-                <p className="feedback">{this.props.feedback}</p>
-                <button className="submit">Submit</button>
-                <button className="next" onClick={() => this.props.dispatch(fetchQuestions())}>Next Question</button>
-            </form>
+                {/* <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}> */}
+                <form onSubmit={event => this.onSubmit(event)} >
+                    <p className="question-message">
+                        What is the English equivalent of this Dothraki word?</p>
+                    <p className="dothraki">
+                        {this.props.questions ? this.props.questions.question : ''}</p>
+                    <Field component="input" type="text" name="answer" placeholder="Answer" id="SubmitAnswer" />
+                    <br />
+                    <div className="feedback">
+                        <p className="correct"># of times correct:<br />{this.props.correct}</p>
+                        <br />
+                        <p className="incorrect"># of times incorrect:<br />{this.props.incorrect}</p>
+                    </div>
+                    <div className="buttons">
+                        <button className="submit">Submit</button>
+                        <button className="next" onClick={() => this.props.dispatch(fetchQuestions())}>Next Question</button>
+                    </div>
+                </form>
             </div>
         )
     };
@@ -43,8 +49,8 @@ const mapStateToProps = state => {
     const { currentUser } = state.auth;
     return {
         questions: state.questions.data,
-        feedback: state.questions.feedback,
-        correct: state.questions.correct
+        correct: state.questions.correct,
+        incorrect: state.questions.incorrect
     }
 }
 

@@ -10,9 +10,9 @@ import {
 
 const initialState = {
     data: null,
-    feedback: null,
     error: null,
-    correct: null
+    correct: 0,
+    incorrect: 0
 };
 
 export default function reducer(state = initialState, action) {
