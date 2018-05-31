@@ -3,6 +3,8 @@ import {
     FETCH_QUESTIONS_ERROR,
     SUBMIT_ANSWER_FEEDBACK,
     SUBMIT_ANSWER_ERROR, 
+    INCREMENT_CORRECT,
+    INCREMENT_INCORRECT,
     //test actions
     CORRECT_ANSWER_SUCCESS,
     INCORRECT_ANSWER_SUCCESS
@@ -40,6 +42,14 @@ export default function reducer(state = initialState, action) {
     } else if(action.type === INCORRECT_ANSWER_SUCCESS) {
         return Object.assign({}, state, {
             correct: false
+        });
+    } else if(action.type === INCREMENT_CORRECT) {
+        return Object.assign({}, state, {
+            correct: state.correct + 1
+        });
+    } else if(action.type === INCREMENT_INCORRECT) {
+        return Object.assign({}, state, {
+            incorrect: state.incorrect + 1
         });
     }
     return state;

@@ -13,7 +13,6 @@ export class QuestionCard extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         const answer = document.getElementById("SubmitAnswer").value;
-        // console.log(answer);
         this.props.dispatch(submitAnswer(answer));
     }
 
@@ -32,6 +31,7 @@ export class QuestionCard extends React.Component {
                     <br />
                     <div className="feedback">
                         <p className="correct"># of times correct:<br />{this.props.correct}</p>
+                        
                         <br />
                         <p className="incorrect"># of times incorrect:<br />{this.props.incorrect}</p>
                     </div>
