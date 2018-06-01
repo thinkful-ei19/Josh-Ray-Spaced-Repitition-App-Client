@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { reduxForm, Field } from 'redux-form';
+import { reset, reduxForm, Field } from 'redux-form';
 import { fetchQuestions, submitAnswer } from '../actions/questions';
 
 export class QuestionCard extends React.Component {
@@ -9,11 +9,15 @@ export class QuestionCard extends React.Component {
         this.props.dispatch(fetchQuestions());
     }
 
+    
+
     onSubmit(event) {
         event.preventDefault();
         const answer = document.getElementById("SubmitAnswer").value;
         this.props.dispatch(submitAnswer(answer));
     }
+
+    
 
     render() {
         // console.log(this.props.questions);
