@@ -38,6 +38,7 @@ export class QuestionCard extends React.Component {
         return (
             <div className="SubmitAnswer">
                 <form onSubmit={event => this.onSubmit(event)} className="question-form">
+                <h2>Read the question. Submit your answer. Click Next Question.</h2>
                     <p className="question-message">
                         What is the English equivalent of this Dothraki word?</p>
                     <p className="dothraki">
