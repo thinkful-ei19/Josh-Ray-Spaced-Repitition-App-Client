@@ -45,6 +45,7 @@ body{
     top: 10px;
     border-radius: 15px;
     box-shadow: 5px 5px;
+    font-family: 'Yatra One', cursive;
 }
 
 .dashboard{
@@ -70,6 +71,7 @@ body{
 .logout{
     display: inline-block;
     border-radius: 15px;
+    font-family: 'Yatra One', cursive;
 }
 
 .home{
@@ -82,6 +84,7 @@ body{
     margin-top: 150px;
     margin-left: 250px;
     box-shadow: 5px 10px;
+    font-family: 'Yatra One', cursive;
 }
 
 a{
@@ -108,6 +111,7 @@ a{
     box-shadow: 5px 10px;
     margin-left: 190px;
     margin-top: 100px;
+    font-family: 'Yatra One', cursive;
 }
 
 .SubmitAnswer{
@@ -194,9 +198,9 @@ a{
         width: 60%;
         font-size: 50px;
         color: black;
-        font-weight: bold;
         top: 0;
         position: relative;
+        font-family: 'Yatra One', cursive;
     }
 
     .app{
@@ -266,10 +270,10 @@ a{
         width: 80%;
         font-size: 50px;
         color: black;
-        font-weight: bold;
         padding: 10px;
+        font-family: 'Warnes', cursive;
     }
-
+    
     .app{
         min-height: 100%;
         width: 99%;
@@ -340,6 +344,7 @@ a{
         color: black;
         font-weight: bold;
         padding: 10px;
+        font-family: 'Yatra One', cursive;
     }
 
     .chibi1{
@@ -428,6 +433,7 @@ a{
         color: black;
         font-weight: bold;
         padding: 10px;
+        font-family: 'Yatra One', cursive;
     }
 
     .dashboard-username{
