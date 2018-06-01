@@ -19,9 +19,10 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
+                <img className="chibi1" src="https://s15.postimg.cc/7q8vqr8y3/chibi_khal.gif" alt="chibi-khal" />
                 <h1 className="app-name">Learn Dothraki</h1>
-                
                 {logOutButton}
+                <img className="chibi2" src="https://s15.postimg.cc/b224n7x17/chibi_khaleesi.jpg" alt="chibi-khaleesi" />
             </div>
         );
     }
