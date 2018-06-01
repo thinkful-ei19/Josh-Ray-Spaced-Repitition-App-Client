@@ -310,7 +310,7 @@ a{
     }
  }
  
-@media all and (min-width: 480px) and (max-width: 768px) and (orientation:landscape) { 
+@media all and (min-width: 480px) and (max-width: 768px) { 
     html{
         display: block;
         width: 100%;
@@ -328,18 +328,30 @@ a{
         display: block;
         box-shadow: 5px 10px;
         border-radius: 15px;
-        height: 100px;
+        height: 120px;
         margin: auto;
         margin-top: 10px;
     }
 
     .app-name{
         display: inline-block;
-        width: 80%;
+        width: 50%;
         font-size: 25px;
         color: black;
         font-weight: bold;
         padding: 10px;
+    }
+
+    .chibi1{
+        display: block;
+        float: left;
+        border-radius: 15px;
+    }
+    
+    .chibi2{
+        display: block;
+        float: right;
+        border-radius: 15px;
     }
 
     .dashboard-username{
@@ -411,7 +423,7 @@ a{
 
     .app-name{
         display: inline-block;
-        width: 80%;
+        width: 65%;
         font-size: 25px;
         color: black;
         font-weight: bold;
@@ -458,5 +470,15 @@ a{
         display: block;
         width: 99%;
         margin: auto;
+    }
+
+    .chibi1{
+        display: block;
+        border-radius: 15px;
+        margin-left: 5px;
+    }
+    
+    .chibi2{
+        display: none;
     }
  }
