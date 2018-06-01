@@ -49,14 +49,7 @@ body{
     margin-left: 10px;
 }
 
-.app-name{
-    display: inline-block;
-    width: 80%;
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
-    padding: 10px;
-}
+
 
 .logout{
     display: inline-block;
@@ -184,10 +177,11 @@ a{
     .app-name{
         display: inline-block;
         width: 80%;
-        font-size: 25px;
+        font-size: 50px;
         color: black;
         font-weight: bold;
         padding: 10px;
+        margin-top: 10px;
     }
 
     .app{
