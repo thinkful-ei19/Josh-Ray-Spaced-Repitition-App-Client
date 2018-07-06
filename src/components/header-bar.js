@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
-import './header-bar.css';
 
 export class HeaderBar extends React.Component {
     logOut() {
@@ -20,8 +19,10 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
+                <img className="chibi1" src="https://s15.postimg.cc/7q8vqr8y3/chibi_khal.gif" alt="chibi-khal" />
                 <h1 className="app-name">Learn Dothraki</h1>
                 {logOutButton}
+                <img className="chibi2" src="https://s15.postimg.cc/uiwhkel7v/chibi_khaleesi.gif" alt="chibi-khaleesi" />
             </div>
         );
     }

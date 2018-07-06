@@ -37,6 +37,18 @@ export const fetchQuestionsError = error => ({
     error
 });
 
+export const INCREMENT_CORRECT = 'INCREMENT_CORRECT';
+export const incrementCorrect = correct => ({
+    type: INCREMENT_CORRECT,
+    correct
+});
+
+export const INCREMENT_INCORRECT = 'INCREMENT_INCORRECT';
+export const incrementIncorrect = incorrect => ({
+    type: INCREMENT_INCORRECT,
+    incorrect
+});
+
 // TEST ACTIONS ===============================================
 export const CORRECT_ANSWER_SUCCESS = 'CORRECT_ANSWER_SUCCESS';
 export const correctAnswerSuccess = correct => ({
@@ -63,14 +75,18 @@ export const fetchQuestions = () => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(data => dispatch(fetchQuestionsSuccess(data)))
+        .then(data => {
+            
+            dispatch(fetchQuestionsSuccess(data))
+        })
+
         .catch(err => {
             dispatch(fetchQuestionsError(err));
         });
 };
 
 export const submitAnswer = (value) => (dispatch, getState) => {
-    console.log(value);
+    // console.log(value);
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/api/questions`, {
         method: 'PUT',
@@ -81,7 +97,14 @@ export const submitAnswer = (value) => (dispatch, getState) => {
             body: JSON.stringify({value}) 
     })
     .then(response => response.json())
-    .then(data => dispatch(correctAnswerSuccess(data)))
+    .then(data => {
+        if(data.correct) {
+          dispatch(incrementCorrect())
+        }
+        if(data.incorrect) {
+          dispatch(incrementIncorrect())
+        }
+    })
     .catch(err => dispatch(incorrectAnswerSuccess(err)))
         // console.log(res);
         // return dispatch(submitAnswerFeedback(res));

@@ -15,3 +15,476 @@ body{
     width: 100%;
     display: flex;
 }
+
+.chibi1{
+    display: block;
+    float: left;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.chibi2{
+    display: block;
+    float: right;
+    border-radius: 15px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.dashboard-username{
+    display: block;
+    position: absolute;
+    width: 20%;
+    background: beige;
+    border: 1px solid tan;
+    height: 20px;
+    right: 10px;
+    padding: 10px;
+    text-align: center;
+    top: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px;
+    font-family: 'Yatra One', cursive;
+}
+
+.dashboard{
+    width: 100%;
+    display: flex;
+}
+
+.header-bar{
+    width: 20%;
+    border: 5px solid tan;
+    background: beige;
+    display: flex;
+    box-shadow: 5px 10px;
+    border-radius: 15px;
+    text-align: center;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+.logout{
+    display: inline-block;
+    border-radius: 15px;
+    font-family: 'Yatra One', cursive;
+}
+
+.home{
+    display: block;
+    width: 20%;
+    text-align: center;
+    border: 5px solid tan;
+    background: beige;
+    border-radius: 15px;
+    margin-top: 150px;
+    margin-left: 250px;
+    box-shadow: 5px 10px;
+    font-family: 'Yatra One', cursive;
+}
+
+a{
+    color: black;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.form-input{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.question-form{
+    display: inline-block;
+    width: 45%;
+    background: beige;
+    border: 5px solid tan;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 10px;
+    margin-left: 190px;
+    margin-top: 100px;
+    font-family: 'Yatra One', cursive;
+}
+
+.SubmitAnswer{
+    display: block;
+    align-content: center;
+}
+
+.submit{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 35%;
+    box-shadow: 2px 5px;
+}
+
+.next{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 35%;
+    box-shadow: 2px 5px;
+}
+
+.feedback{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: inline-block;
+    width: 80%;
+}
+
+.question-message{
+    font-size:25px;
+}
+
+.dothraki{
+    color: yellow;
+    background: black;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+    html{
+        display: block;
+        width: 100%;
+    }
+
+    body{
+        background-position: center;
+    }
+
+    .header-bar{
+        width: 90%;
+        border: 5px solid tan;
+        background: beige;
+        display: block;
+        box-shadow: 5px 10px;
+        border-radius: 15px;
+        height: 120px;
+        margin: auto;
+        margin-top: 60px;
+    }
+
+    .dothraki{
+        color: yellow;
+        background: black;
+        border-radius: 15px;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .app-name{
+        display: inline-block;
+        width: 60%;
+        font-size: 50px;
+        color: black;
+        top: 0;
+        position: relative;
+        font-family: 'Yatra One', cursive;
+    }
+
+    .app{
+        min-height: 100%;
+        width: 99%;
+        display: block;
+        margin: auto;
+    }
+
+    .question-form{
+        display: block;
+        width: 60%;
+        background: beige;
+        border: 5px solid tan;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    .home{
+        display: block;
+        width: 60%;
+        text-align: center;
+        border: 5px solid tan;
+        background: beige;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+
+    .SubmitAnswer{
+        display: block;
+        width: 99%;
+        margin: auto;
+    }
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    html{
+        display: block;
+        width: 100%;
+    }
+
+    body{
+        background-position: center;
+    }
+
+    .header-bar{
+        width: 90%;
+        border: 5px solid tan;
+        background: beige;
+        display: flex;
+        box-shadow: 5px 10px;
+        border-radius: 15px;
+        height: 100px;
+        margin: auto;
+        margin-top: 60px;
+    }
+
+    .app-name{
+        display: inline-block;
+        width: 80%;
+        font-size: 50px;
+        color: black;
+        padding: 10px;
+        font-family: 'Warnes', cursive;
+    }
+    
+    .app{
+        min-height: 100%;
+        width: 99%;
+        display: block;
+        margin: auto;
+    }
+
+    .question-form{
+        display: block;
+        width: 80%;
+        background: beige;
+        border: 5px solid tan;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 10px;
+    }
+
+    .home{
+        display: block;
+        width: 60%;
+        text-align: center;
+        border: 5px solid tan;
+        background: beige;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+
+    .SubmitAnswer{
+        display: block;
+        width: 99%;
+        margin: auto;
+    }
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    html{
+        display: block;
+        width: 100%;
+    }
+
+    body{
+        background-image: url(https://s15.postimg.cc/bt34hs60r/Dothraki_Banner.jpg);
+        background-position: center;
+    }
+
+    .header-bar{
+        width: 90%;
+        border: 5px solid tan;
+        background: beige;
+        display: block;
+        box-shadow: 5px 10px;
+        border-radius: 15px;
+        height: 120px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .app-name{
+        display: inline-block;
+        width: 50%;
+        font-size: 25px;
+        color: black;
+        font-weight: bold;
+        padding: 10px;
+        font-family: 'Yatra One', cursive;
+    }
+
+    .chibi1{
+        display: block;
+        float: left;
+        border-radius: 15px;
+    }
+    
+    .chibi2{
+        display: block;
+        float: right;
+        border-radius: 15px;
+    }
+
+    .dashboard-username{
+        display: none;
+    }
+
+    .app{
+        min-height: 100%;
+        width: 99%;
+        display: block;
+        margin: auto;
+    }
+
+    .question-form{
+        display: block;
+        width: 80%;
+        background: beige;
+        border: 5px solid tan;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .home{
+        display: block;
+        width: 60%;
+        text-align: center;
+        border: 5px solid tan;
+        background: beige;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .SubmitAnswer{
+        display: block;
+        width: 99%;
+        margin: auto;
+    }
+}
+ 
+@media all and (max-width: 480px) {
+    html{
+        display: block;
+        width: 100%;
+    }
+
+    body{
+        background-image: url(https://s15.postimg.cc/bt34hs60r/Dothraki_Banner.jpg);
+        background-position: center;
+    }
+
+    .header-bar{
+        width: 90%;
+        border: 5px solid tan;
+        background: beige;
+        display: block;
+        box-shadow: 5px 10px;
+        border-radius: 15px;
+        height: 130px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .app-name{
+        display: inline-block;
+        width: 65%;
+        font-size: 25px;
+        color: black;
+        font-weight: bold;
+        padding: 10px;
+        font-family: 'Yatra One', cursive;
+    }
+
+    .dashboard-username{
+        display: none;
+    }
+
+    .app{
+        min-height: 100%;
+        width: 99%;
+        display: block;
+        margin: auto;
+    }
+
+    .question-form{
+        display: block;
+        width: 80%;
+        background: beige;
+        border: 5px solid tan;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .home{
+        display: block;
+        width: 90%;
+        text-align: center;
+        border: 5px solid tan;
+        background: beige;
+        border-radius: 15px;
+        box-shadow: 5px 10px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .SubmitAnswer{
+        display: block;
+        width: 99%;
+        margin: auto;
+    }
+
+    .chibi1{
+        display: block;
+        border-radius: 15px;
+        margin-left: 5px;
+    }
+    
+    .chibi2{
+        display: none;
+    }
+ }
