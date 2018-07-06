@@ -1,0 +1,59 @@
+.question-form{
+    display: inline-block;
+    width: 45%;
+    background: beige;
+    border: 5px solid tan;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 10px;
+    margin-left: 190px;
+    margin-top: 100px;
+}
+
+.SubmitAnswer{
+    display: block;
+    align-content: center;
+}
+
+.submit{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 35%;
+    box-shadow: 2px 5px;
+}
+
+.next{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 35%;
+    box-shadow: 2px 5px;
+}
+
+.feedback{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: inline-block;
+    width: 80%;
+}
+
+.question-message{
+    font-size:25px;
+}
+
+.dothraki{
+    color: yellow;
+    background: black;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}

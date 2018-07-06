@@ -5,10 +5,14 @@ import { reset, reduxForm, Field } from 'redux-form';
 import { fetchQuestions, submitAnswer } from '../actions/questions';
 import ToggleDisplay from 'react-toggle-display';
 
+const required = value => value ? undefined : 'Required';
+
 export class QuestionCard extends React.Component {
     constructor(props) {
         super();
-        this.state = { show: false };
+        this.state = {
+            show: false
+        };
     }
 
     componentDidMount() {
@@ -24,9 +28,10 @@ export class QuestionCard extends React.Component {
         });
     }
 
-    handleClick(event){
+    handleClick(event) {
         event.preventDefault();
         this.props.dispatch(fetchQuestions());
+        this.props.dispatch(reset('answerQuestion'));
         this.setState({
             show: !this.state.show
         });
@@ -37,18 +42,18 @@ export class QuestionCard extends React.Component {
 
         return (
             <div className="SubmitAnswer">
-                <form onSubmit={event => this.onSubmit(event)} className="question-form">
-                <h2>Read the question. Submit your answer. Click Next Question.</h2>
+                {/* <form className="question" onSubmit={this.props.handleSubmit(value => this.onSubmit(value.answer))}> */}
+                <form onSubmit={event => this.onSubmit(event)} className="question-form" ref="form">
+                    <h2>Read the question. Submit your answer. Click Next Question.</h2>
                     <p className="question-message">
                         What is the English equivalent of this Dothraki word?</p>
                     <p className="dothraki">
                         {this.props.questions ? this.props.questions.question : ''}</p>
-                    <Field component="input" type="text" name="answer" placeholder="Answer" id="SubmitAnswer" />
+                    <Field component="input" type="text" name="answer" value={this.state.input} id="SubmitAnswer" />
                     <br />
                     <div className="feedback">
-                        <p> The correct answer is:
-                        <ToggleDisplay if={this.state.show}>
-                        {this.props.questions ? this.props.questions.answer : ''}
+                        <p> The correct answer is: <ToggleDisplay if={this.state.show}>
+                            {this.props.questions ? this.props.questions.answer : ''}
                         </ToggleDisplay>
                         </p>
                         <p className="correct"># of times correct:<br />{this.props.correct}</p>
