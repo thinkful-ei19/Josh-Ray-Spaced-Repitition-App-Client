@@ -17,3 +17,7 @@ Here is a link to the deployed application: [Dothraki Language App](https://lear
 ![Dashboard](https://user-images.githubusercontent.com/31050196/40870949-6d36c640-65e7-11e8-81fc-7c6ef611f1bf.png)
 
 * Dothraki Language App was built using the MERN stack. The front end utilized React/Redux and the back end was built with Node.js, Express, and MongoDB. 
+
+The server side of the application can be found here: 
+
+https://github.com/thinkful-ei19/Josh-Ray-Spaced-Repetition-App-Server
